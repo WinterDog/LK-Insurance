@@ -1,0 +1,128 @@
+/* Headers */
+
+h1,h2,h3,h4,h5,h6
+{
+	font-weight:		400;
+	line-height:		1.25;
+	margin:				0;
+
+	a
+	{
+		color:				rgb(102, 102, 102);
+	}
+}
+
+h1
+{
+	font-family:		@font-family-special;
+	font-size:			@h1-font-size;
+
+	@media (max-width: @screen-sm-max)
+	{
+		font-size:			@h1-font-size * 0.85;
+	}
+	@media (max-width: @screen-xs-max)
+	{
+		font-size:			@h1-font-size * 0.7;
+	}
+}
+h2
+{
+	font-family:		@font-family-special;
+	font-size:			@h2-font-size;
+	line-height:		1.3;
+
+	@media (max-width: @screen-sm-max)
+	{
+		font-size:		2.3rem;
+	}
+	@media (max-width: @screen-xs-max)
+	{
+		font-size:		2.3rem * 0.7;
+	}
+	h1+&
+	{
+		margin-top:		0.3em;
+	}
+	p+&
+	{
+		margin-top:		1.5em;
+	}
+	ul+&,
+	ol+&
+	{
+		margin-top:		1.5em;
+	}
+}
+h3
+{
+	font-size:			@h3-font-size;
+
+	@media (max-width: @screen-sm-max)
+	{
+		font-size:		1.7rem * 0.95;
+	}
+	@media (max-width: @screen-xs-max)
+	{
+		font-size:		1.7rem * 0.75;
+	}
+	h1+&,h2+&
+	{
+		margin-top:		0.7em;
+	}
+	p+&
+	{
+		margin-top:		1.7em;
+	}
+	ul+&,
+	ol+&
+	{
+		margin-top:		1.7em;
+	}
+}
+h4
+{
+	font-size:			@h4-font-size;
+	line-height:		1.45;
+
+	@media (max-width: @screen-sm-max)
+	{
+		font-size:		1.4rem * 0.85;
+	}
+	@media (max-width: @screen-xs-max)
+	{
+		font-size:		1.4rem * 0.7;
+	}
+	h1+&,h2+&,h3+&
+	{
+		margin-top:		0.3em;
+	}
+	p+&
+	{
+		margin-top:		1.3em;
+	}
+	ul+&,
+	ol+&
+	{
+		margin-top:		1.3em;
+	}
+}
+h5
+{
+	font-size:			@h5-font-size;
+
+	p+&
+	{
+		margin-top:		1.0em;
+	}
+}
+h6
+{
+	font-size:			@h6-font-size;
+	line-height:		1.4;
+
+	p+&
+	{
+		margin-top:		0.8em;
+	}
+}

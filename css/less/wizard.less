@@ -1,0 +1,105 @@
+.calc-step
+{
+	margin-bottom:				2.0rem;
+	padding-right:				1.5rem;
+
+	.step-header
+	{
+		min-height:					4.2rem;
+		position:					relative;
+
+		.step-index
+		{
+			background-color:			fade(@bgr-color-2, 50%);
+			border-radius:				50%;
+			color:						rgb(255, 255, 255);
+			font-size:					2.0rem;
+			font-weight:				bold;
+			height:						4.2rem;
+			left:						0;
+			margin-right:				2.0rem;
+			padding:					0.5rem 0 0 1.6rem;
+			position:					absolute;
+			top:						0;
+			width:						4.2rem;
+	
+			&.icon-check
+			{
+				padding-left:				1.2rem;
+			}
+			&.active
+			{
+				background-color:			fade(@bgr-color-2, 100%);
+			}
+		}
+		.step-title
+		{
+			//font-size:					1.2rem;
+			left:						5.0rem;
+			position:					absolute;
+			right:						1.0rem;
+			top:						50%;
+			transform:					translateY(-50%);
+		}
+	}
+	.step-desc
+	{
+		margin:						0.7rem 0;
+		padding-left:				5.0rem;
+	}
+}
+
+.calc-step-h
+{
+	display:					inline-block;
+	margin-bottom:				0.7rem;
+	padding-right:				5.5rem;
+}
+.step-title-h
+{
+	margin:						0 0 1.2rem 0;
+}
+
+.wizard
+{
+	margin-bottom:				2.0rem;
+
+	.wizard-step
+	{
+		background-image:		linear-gradient(
+									to right,
+									rgb(36, 128, 254) 50%,
+									rgb(255, 126, 0) 50%);
+		/*background-image:		linear-gradient(
+									to right,
+									rgb(36, 128, 254) 25%,
+									rgb(255, 126, 0) 25%,
+									rgb(255, 126, 0) 50%,
+									rgb(255, 255, 255) 50%);*/
+		background-position:	0 0;
+		background-size:		200% 100%;
+		transition:				all 0.5s;
+
+		p
+		{
+			color:				rgb(255, 255, 255);
+			font-weight:		400;
+			margin:				0;
+			padding:			0.5rem;
+			text-align:			center;
+		}
+		&.active
+		{
+			background-position:	-100% 0;
+		}
+		&.done
+		{
+			background-position:	-200% 0;
+
+			&.active
+			{
+				background-position:	-100% 0;
+			}
+		}
+	}
+}

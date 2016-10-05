@@ -1,0 +1,36 @@
+.breadcrumb-wrap
+{
+	padding:			0 3.5rem;
+
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
+	{
+		padding:			0 2.0rem;
+	}
+
+	.breadcrumb
+	{
+		background:			none;
+		font-size:			0.8rem;
+		font-weight:		400;
+		margin:				1.5rem 0 0 0;
+		padding:			0;
+
+		&>li+li:before
+		{
+			color:				rgb(220, 220, 220);
+			content:			"\f054";
+			font-family:		FontAwesome;
+			padding:			0 1.0rem;
+
+			@media (max-width: @screen-xs-max)
+			{
+				padding:			0 0.5rem;
+			}
+		}
+
+		.active
+		{
+			color:				rgb(85, 85, 85);
+		}
+	}
+}

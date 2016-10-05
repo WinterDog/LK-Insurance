@@ -1,0 +1,31 @@
+a
+{
+	color:				rgb(0, 171, 255);//rgb(36, 182, 254);
+	text-decoration:	none;
+
+	&:focus,&:hover
+	{
+		color:				rgb(36, 128, 254);
+		text-decoration:	none;
+	}
+
+	&.no-color
+	{
+		color:				@font-color;
+
+		span.underline
+		{
+			border-bottom:		1px solid lighten(@font-color, 50%);
+		}
+
+		&:focus,&:hover
+		{
+			color:				rgb(36, 128, 254);
+
+			span.underline
+			{
+				border-bottom:		1px solid lighten(rgb(36, 128, 254), 20%);
+			}
+		}
+	}
+}

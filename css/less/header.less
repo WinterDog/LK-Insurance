@@ -1,0 +1,279 @@
+/* Headers */
+
+.page-header
+{
+	border:				0;
+	font-family:		@font-family-special;
+	font-size:			1.1rem;
+	font-weight:		600;
+	margin:				0;
+	padding:			1.5rem 0;
+
+	@media (max-width: @screen-md-max)
+	{
+		padding:			1.2rem 0;
+	}
+	@media (max-width: @screen-sm-max)
+	{
+		padding:			1.0rem 0;
+	}
+	@media (max-width: @screen-xs-max)
+	{
+		padding:			0.5rem 0;
+	}
+
+	.header-content
+	{
+		//background:			rgba(255, 255, 255, 0.9);
+		//margin:				0 auto;
+		//max-width:			@max-width-wrap;
+		position:			relative;
+		//text-align:			center;
+		//width:				100%;
+		//transition:			all 0.5s;
+
+		.logo
+		{
+			float:				left;
+			//margin-left:		14.0rem;
+			position:			relative;
+			transition:			all 0.5s;
+
+			@media (max-width: @screen-md-max)
+			{
+				margin-left:		1.0rem;
+			}
+			@media (max-width: @screen-sm-max)
+			{
+				margin-left:		2.0rem;
+				//max-width:			11.1rem;
+				padding:			0.2rem;
+			}
+			@media (max-width: @screen-xs-max)
+			{
+				margin-left:		3.0rem;
+				//max-width:			8.3rem;
+			}
+
+			.logo-img
+			{
+				max-width:			6.0rem;
+
+				@media (max-width: @screen-sm-max)
+				{
+					max-width:			5.0rem;
+				}
+				@media (max-width: @screen-xs-max)
+				{
+					max-width:			5.0rem;
+				}
+			}
+			.logo-text
+			{
+				color:				@font-color-lighter;
+				font-size:			1.65rem;
+				font-weight:		bold;
+				left:				6.0rem;
+				line-height:		1.07;
+				padding-left:		1.0rem;
+				position:			absolute;
+				top:				-0.2rem;
+				width:				10.0rem;
+
+				@media (max-width: @screen-sm-max)
+				{
+					font-size:			1.35rem;
+					left:				5.0rem;
+					line-height:		1.15;
+					top:				0;
+				}
+				@media (max-width: @screen-xs-max)
+				{
+					font-size:			1.2rem;
+					line-height:		1.3;
+				}
+			}
+		}
+		.header-item-wrap
+		{
+			color:				@font-color-lighter;
+			float:				right;
+			font-size:			1.35rem;
+			margin-top:			1.4rem;
+			transition:			all 0.5s;
+
+			@media (max-width: @screen-md-max)
+			{
+				font-size:			1.25rem;
+			}
+			@media (max-width: @screen-sm-max)
+			{
+				font-size:			1.1rem;
+				margin-top:			0;
+			}
+			@media (max-width: @screen-xs-max)
+			{
+			}
+		}
+		.header-item
+		{
+			display:			inline-block;
+			margin-left:		4.0rem;
+			//position:			relative;
+			transition:			all 0.5s;
+
+			@media (max-width: @screen-md-max)
+			{
+				margin-left:		1.0rem;
+			}
+			@media (max-width: @screen-sm-max)
+			{
+				display:			block;
+				margin-left:		0;
+				margin-bottom:		-0.07rem;
+				//text-align:			right;
+			}
+			@media (max-width: @screen-xs-max)
+			{
+				display:			block;
+				margin-left:		0;
+				margin-bottom:		-0.07rem;
+				//text-align:			right;
+			}
+
+			&.account
+			{
+				margin-right:		0;
+			}
+
+			a
+			{
+				color:				@font-color-lighter;
+
+				&:focus,&:hover
+				{
+					color:				rgb(0, 98, 207);
+				}
+			}
+
+			.fa
+			{
+				color:				@bgr-color-2;
+				//left:				-1.8rem;
+				margin-right:		0.5rem;
+				//position:			absolute;
+				//top:				0.45rem;
+			}
+			.fa-phone
+			{
+				//margin-right:		-0.1rem;
+			}
+			.fa-envelope
+			{
+				//left:				-2.2rem;
+				margin-right:		0.3rem;
+				//top:				0.35rem;
+			}
+			&.account
+			{
+				.fa
+				{
+					//left:				-1.7rem;
+					margin-right:		0.9rem;
+					//top:				0.4rem;
+				}
+			}
+			&.exit
+			{
+				margin-left:		1.0rem;
+				margin-right:		0;
+
+				.fa
+				{
+					//left:				-1.0rem;
+					//top:				0.4rem;
+				}
+			}
+		}
+		.header-item-2
+		{
+			position:			absolute;
+			text-transform:		uppercase;
+			top:				1.4em;
+
+			@media (max-width: @screen-sm-max)
+			{
+				top:				0.9em;
+			}
+			&.right-item
+			{
+				right:			1.6em;
+
+				@media (max-width: @screen-sm-max)
+				{
+					right:				0;
+				}
+				@media (max-width: @screen-xs-max)
+				{
+					top:				0.5em;
+				}
+			}
+			a
+			{
+				color:				rgb(36, 128, 254);
+				padding:			1.6em 1.3em;
+				text-decoration:	none;
+				transition:			all 0.5s;
+
+				&:focus,&:hover
+				{
+					color:				rgb(0, 98, 207);
+					text-decoration:	none;
+				}
+				@media (max-width: @screen-sm-max)
+				{
+					padding:			1.0em 1.3em;
+				}
+				@media (max-width: @screen-xs-max)
+				{
+					padding:			0.8em 1.1em 0.6em 1.1em;
+				}
+			}
+		}
+	}
+
+	&.stick
+	{
+		.logo
+		{
+			opacity:			1.0;
+		}
+		.phone
+		{
+			margin-left:		5.0rem;
+
+			@media (max-width: @screen-sm-max)
+			{
+				margin-left:		3.0rem;
+			}
+		}
+	}
+
+	&.header-transparent.stick
+	{
+		.header-content
+		{
+			background:		none;
+
+			a
+			{
+				color:				rgb(255, 255, 255);
+
+				&:focus,&:hover
+				{
+					color:				rgb(220, 220, 220);
+				}
+			}
+		}
+	}
+}

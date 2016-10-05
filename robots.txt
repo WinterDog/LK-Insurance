@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /add_policy_by_number_success/
+Disallow: /auth_registration_confirmed/

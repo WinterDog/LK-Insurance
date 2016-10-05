@@ -1,0 +1,88 @@
+.header-block
+{
+	//background-color:		rgba(36, 128, 254, 0.7);
+	//background-image:		url(img/header-block-bgr.png);
+	//background-position:	top right;
+	//color:					rgb(255, 255, 255);
+	//padding:				2.0rem 2.5rem;
+	margin-left:			0.5rem;
+	margin-top:				3.1rem;
+	//max-width:				64.0rem;
+	text-shadow:			rgb(0, 0, 0) 0 0 0.5rem, rgb(0, 0, 0) 0 0 0.7rem, rgb(0, 0, 0) 0 0 0.9rem;
+
+	@media (max-width: @screen-md-max)
+	{
+		margin-top:				2.5rem;
+		//width:					35.0rem;
+	}
+	@media (max-width: @screen-sm-max)
+	{
+		margin-top:				1.7rem;
+		//width:					32.0rem;
+	}
+	@media (max-width: @screen-xs-max)
+	{
+		margin-top:				0;
+		padding:				1.4rem 0;
+		//width:					auto;
+	}
+
+	&.no-bgr
+	{
+		background:				none;
+	}
+	&.bgr-alt
+	{
+		background-color:		rgba(255, 126, 0, 0.7);
+	}
+
+	.text-black
+	{
+		color:					rgb(0, 0, 0);
+		/*text-shadow:			2px 2px 1px rgba(255, 255, 255, 0.7);*/
+	}
+	.text-white
+	{
+		color:					rgb(255, 255, 255);
+		/*text-shadow:			2px 2px 1px rgba(0, 0, 0, 0.7);*/
+	}
+
+	h1
+	{
+		font-size:				2.6rem;
+		font-weight:			600;
+
+		@media (max-width: @screen-md-max)
+		{
+			font-size:				2.2rem;
+		}
+		@media (max-width: @screen-xs-max)
+		{
+			font-size:				1.7rem;
+		}
+	}
+	h3
+	{
+		@media (max-width: @screen-xs-max)
+		{
+			font-size:				1.2rem;
+		}
+	}
+	p
+	{
+		@media (max-width: @screen-md-max)
+		{
+			font-size:				1.15rem;
+		}
+
+		a
+		{
+			color:					rgb(85, 209, 255);
+	
+			&:focus,&:hover
+			{
+				color:					lighten(rgb(85, 209, 255), 10%);/*rgb(36, 182, 254);*/
+			}
+		}
+	}
+}

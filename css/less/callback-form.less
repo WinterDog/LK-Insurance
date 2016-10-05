@@ -1,0 +1,41 @@
+.callback-btn
+{
+	background-color:	fade(@bgr-color-2, 70%);
+	bottom:				50%;
+	color:				rgb(255, 255, 255);
+	display:			block;
+	font-size:			1.2rem;
+	height:				2.8rem;
+	padding:			0.5rem;
+	position:			fixed;
+	right:				-7.0rem;
+	text-align:			center;
+	text-shadow:		rgba(0, 0, 0, 0.7) 0 0 0.5rem;
+	transform:			rotate(-90deg);
+	transform-origin:	center bottom;
+	transition:			all 0.5s;
+	width:				14.0rem;
+
+	@media (max-width: @screen-xs-max)
+	{
+		bottom:				1.7rem;
+		right:				-1.7rem;
+		width:				3.4rem;
+	}
+
+	&:focus,&:hover
+	{
+		background-color:	fade(@bgr-color-2, 100%);
+		color:				rgb(255, 255, 255);
+	}
+
+	.fa
+	{
+		margin-right:		0.5rem;
+
+		@media (max-width: @screen-xs-max)
+		{
+			margin-right:		0;
+		}
+	}
+}

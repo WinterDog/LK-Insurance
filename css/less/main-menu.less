@@ -1,0 +1,261 @@
+/* Main menu */
+
+.main-menu-btn
+{
+	background-color:		fade(@bgr-color-2, 70%);
+	color:					rgb(255, 255, 255);
+	font-size:				1.2rem;
+	left:					0;
+	padding:				0.7rem 1.0rem 0.8rem 1.0rem;
+	position:				fixed;
+	text-shadow:			rgba(0, 0, 0, 0.7) 0 0 0.5rem;
+	top:					0;
+	transition:				all 0.5s;
+	z-index:				10;
+
+	@media (max-width: @screen-md-max)
+	{
+		left:				0;
+	}
+	@media (max-width: @screen-xs-max)
+	{
+	}
+
+	&:focus,&:hover
+	{
+		background-color:		fade(@bgr-color-2, 100%);
+		color:					rgb(255, 255, 255);
+		//color:				rgb(0, 98, 207) !important;
+	}
+
+	&.stick
+	{
+	}
+
+	@media (max-width: @screen-xs-max)
+	{
+		padding:				0.7rem 1.0rem 0.6rem 1.0rem;
+	}
+
+	.menu-icon
+	{
+		//margin-right:		0.6em;
+
+		//@media (max-width: @screen-md-max)
+		//{
+			font-size:			1.5rem;
+			margin-right:		0;
+		//}
+	}
+	.menu-title
+	{
+		//@media (max-width: @screen-md-max)
+		//{
+			display:			none;
+		//}
+	}
+}
+
+.main-menu
+{
+	background:			rgb(255, 255, 255);
+	bottom:				0;
+	left:				-24.0rem;
+	position:			fixed;
+	top:				0;
+	z-index:			1001;	
+	width:				24.0rem;
+	transition:			0.6s;
+
+	.close
+	{
+		/* Remove Bottstrap's float: right. */
+		float:			none;
+		/* Add padding so it would be easier to click on touch devices. */
+		padding:		0.95rem 1.05rem;
+		/* Positioning. */
+		position:		absolute;
+		right:			0;
+		top:			0;
+	}
+	&.mm-open
+	{
+		left:				0;
+	}
+	.main-menu-wrap
+	{
+		height:				100%;
+		overflow:			hidden;
+		position:			relative;
+
+		.main-menu-content
+		{
+			height:				100%;
+			overflow-y:			auto;
+			padding-bottom:		8.0rem;
+			position:			relative;
+
+			.logo
+			{
+				display:			inline-block;
+				margin:				1.4rem 0 0 2.0rem;
+				width:				4.0rem;
+			}
+			ul
+			{
+				a
+				{
+					display:			block;
+					padding:			0.5rem;
+				}
+				&.menu-list-0
+				{
+					padding-top:		0.6rem;
+
+					a
+					{
+						color:				rgb(36, 128, 254);
+						font-family:		@font-family-special;
+						font-size:			1.2rem;
+						font-weight:		600;
+						padding-left:		1.8rem;
+						text-transform:		uppercase;
+
+						&:focus,&:hover
+						{
+							color:				rgb(0, 98, 207);
+						}
+						&.collapse-trigger:after
+						{
+							content:			"\f078";
+							display:			inline-block;
+							font-family:		FontAwesome;
+							font-size:			0.5rem;
+							font-weight:		400;
+							padding:			0 0.3rem;
+							vertical-align:		15%;
+							transform:			rotate(0);
+							transition:			all 0.3s;
+						}
+						&.collapse-trigger:not(.collapsed):after
+						{
+							transform:			rotate(-180deg);
+						}
+					}
+				}
+				&.menu-list-1
+				{
+					a
+					{
+						color:				rgb(85, 85, 85);
+						font-family:		@font-family;
+						font-size:			1.05rem;
+						font-weight:		400;
+						padding:			0.35rem 0.35rem 0.35rem 2.1rem;
+						text-transform:		none;
+
+						&:focus,&:hover
+						{
+							color:				rgb(36, 128, 254);
+						}
+						&.collapse-trigger:after
+						{
+							vertical-align:		10%;
+						}
+					}
+				}
+				&.menu-list-2
+				{
+					a
+					{
+						color:				rgb(153, 153, 153);
+						font-family:		@font-family;
+						font-size:			1.05rem;
+						font-weight:		400;
+						padding:			0.35rem 0.35rem 0.35rem 2.8rem;
+						text-transform:		none;
+
+						&:focus,&:hover
+						{
+							color:				rgb(36, 128, 254);
+						}
+					}
+				}
+				li.active>a
+				{
+					color:				rgb(255, 126, 0);
+				}
+			}
+		}
+		.site-search-form-wrap
+		{
+			bottom:			0;
+			left:			0;
+			position:		absolute;
+			right:			0;
+
+			.site-search-wrap
+			{
+				position:		relative;
+
+				.fa
+				{
+					color:			rgb(255, 255, 255);
+					font-size:		1.2rem;
+					left:			1.0rem;
+					position:		absolute;
+					top:			1.1rem;
+				}
+				input
+				{
+					background:		rgb(36, 128, 254);
+					border:			0;
+					border-radius:	0;
+					color:			rgb(255, 255, 255);
+					font-size:		1.3rem;
+					font-weight:	400;
+					height:			auto;
+					padding:		0.8rem 1.6rem 0.9rem 2.5rem;
+
+					&:-moz-placeholder
+					{
+						color:			rgb(255, 255, 255);
+						opacity:		1.0;
+					}
+					&::-moz-placeholder
+					{
+						color:			rgb(255, 255, 255);
+						opacity:		1.0;
+					}
+					&:-ms-input-placeholder
+					{
+						color:			rgb(255, 255, 255);
+					}
+					&::-webkit-input-placeholder
+					{
+						color:			rgb(255, 255, 255);
+					}
+
+					&:focus:-moz-placeholder
+					{
+						color:			rgb(146, 192, 255);
+						opacity:		1.0;
+					}
+					&:focus::-moz-placeholder
+					{
+						color:			rgb(146, 192, 255);
+						opacity:		1.0;
+					}
+					&:focus:-ms-input-placeholder
+					{
+						color:			rgb(146, 192, 255);
+					}
+					&:focus::-webkit-input-placeholder
+					{
+						color:			rgb(146, 192, 255);
+					}
+				}
+			}
+		}
+	}
+}

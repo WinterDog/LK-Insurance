@@ -1,0 +1,123 @@
+.image-preview
+{
+	background:			rgb(238, 238, 238);
+	cursor:				pointer;
+	height:				200px;
+	overflow:			hidden;
+	position:			relative;
+	width:				200px;
+
+	.text-wrap
+	{
+		.padding();
+
+		background:			rgba(238, 238, 238, 0.9);
+		position:			absolute;
+	}
+}
+
+hr
+{
+	margin:				2.0rem 0;
+}
+
+.share-label
+{
+	color:				rgb(85, 85, 85);
+	margin-top:			2.0rem;
+	text-transform:		uppercase;
+}
+.share-btn-wrap
+{
+	margin-top:			1.0rem;
+
+	&>*
+	{
+		float:				left;
+		margin-right:		1.0rem;
+	}
+	a
+	{
+		border-style:		solid;
+		border-width:		0.2rem;
+		color:				rgb(255, 255, 255);
+		display:			block;
+		font-size:			1.6rem;
+		height:				3.1rem;
+		padding-top:		0.3rem;
+		text-align:			center;
+		width:				3.1rem;
+
+		&.facebook
+		{
+			background:			rgb(59, 89, 152);
+			border-color:		rgb(59, 89, 152);
+
+			&:hover,&:focus
+			{
+				background:			rgb(255, 255, 255);
+				color:				rgb(59, 89, 152);
+			}
+		}
+		&.vk
+		{
+			background:			rgb(89, 123, 160);
+			border-color:		rgb(89, 123, 160);
+
+			&:hover,&:focus
+			{
+				background:			rgb(255, 255, 255);
+				color:				rgb(89, 123, 160);
+			}
+		}
+		&.twitter
+		{
+			background:			rgb(64, 153, 255);
+			border-color:		rgb(64, 153, 255);
+
+			&:hover,&:focus
+			{
+				background:			rgb(255, 255, 255);
+				color:				rgb(64, 153, 255);
+			}
+		}
+		&.google
+		{
+			background:			rgb(211, 72, 54);
+			border-color:		rgb(211, 72, 54);
+
+			&:hover,&:focus
+			{
+				background:			rgb(255, 255, 255);
+				color:				rgb(211, 72, 54);
+			}
+		}
+		&.linkedin
+		{
+			background:			rgb(0, 123, 182);
+			border-color:		rgb(0, 123, 182);
+
+			&:hover,&:focus
+			{
+				background:			rgb(255, 255, 255);
+				color:				rgb(0, 123, 182);
+			}
+		}
+		&.pinterest
+		{
+			background:			rgb(203, 32, 39);
+			border-color:		rgb(203, 32, 39);
+
+			&:hover,&:focus
+			{
+				background:			rgb(255, 255, 255);
+				color:				rgb(203, 32, 39);
+			}
+		}
+	}
+}
+
+.disqus-wrap
+{
+	margin-top:				3.0rem;
+}

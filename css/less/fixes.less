@@ -1,0 +1,70 @@
+input.hasDatepicker
+{
+	position:		relative;
+	z-index:		10;
+}
+/*
+	Fix vertical scroll hiding and padding-right on <body> when modal is shown.
+*/
+.modal-open
+{
+	/* Overwrite overflow: hidden. */
+	overflow-y:		scroll;
+
+	/* As the padding-right is set via style of the body, have to use this ugly rule. */
+	&[style]
+	{
+		padding-right:	0 !important;
+	}
+}
+/*
+	Preparation for the close button.
+*/
+.modal-header
+{
+	position:		relative;
+}
+/*
+	Make muted text a bit lighter cause the font color is lighter than default.
+*/
+.text-muted
+{
+	color:			rgb(134, 134, 134);
+}
+
+/*
+	Fix for extra 1px of height for input-groups (because of non-standard font family).
+*/
+.input-group-lg>.input-group-addon
+{
+	line-height:	1.0;
+}
+
+/*
+	Own Carousel grabbing.png missing fix.
+*/
+.grabbing
+{
+	cursor:			url(img/owl-carousel/grabbing.png) 8 8, move;
+}
+
+.file-preview-frame,
+.file-preview-image,
+.file-preview-other
+{
+	height:			7.0rem;
+}
+
+.slider-selection
+{
+	background:		rgb(186, 186, 186) !important;
+}
+
+.modal-backdrop
+{
+	z-index:		940;
+}
+.modal
+{
+	z-index:		950;
+}

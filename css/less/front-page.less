@@ -1,0 +1,376 @@
+.front-icons
+{
+	margin-top:				0;
+
+	@media (max-width: @screen-xs-max)
+	{
+		margin-top:				0.5rem;
+	}
+
+	.col-xs-2
+	{
+		padding-left:			0.5rem;
+		padding-right:			0.5rem;
+	}
+
+	.icon-wrap
+	{
+		display:				inline-block;
+		padding:				0 0.5rem 0 0.5rem;
+		width:					16.5%;
+	}
+	.icon
+	{
+		background-color:		fade(@bgr-color-1, 73%);
+		border-bottom:			0.7rem solid rgb(255, 255, 255);
+		color:					rgb(255, 255, 255);
+		display:				block;
+		padding:				0.2rem;
+		transition:				all 0.5s;
+
+		@media (max-width: @screen-sm-max)
+		{
+			margin-top:				0;
+			opacity:				1.0;
+		}
+
+		&:focus,&:hover
+		{
+			background-color:		fade(@bgr-color-1, 100%);
+		}
+		&.active
+		{
+			background-color:		@bgr-color-1;
+			border-bottom:			0.7rem solid @bgr-color-1;
+		}
+
+		&.color-alt
+		{
+			background-color:		fade(@bgr-color-2, 73%);
+
+			&:focus,&:hover
+			{
+				background-color:		fade(@bgr-color-2, 100%);
+			}
+			&.active
+			{
+				background-color:		@bgr-color-2;
+				border-bottom:			0.7rem solid @bgr-color-2;
+			}
+		}
+
+		.header-btn
+		{
+			font-size:				1.25rem;
+
+			@media (max-width: @screen-md-max)
+			{
+				font-size:				1.15rem;
+				text-align:				center;
+			}
+
+			img
+			{
+				height:					3.0rem;
+				margin-right:			0.3rem;
+				width:					3.0rem;
+	
+				@media (max-width: @screen-sm-max)
+				{
+					margin-right:			0;
+				}
+			}
+			.btn-text
+			{
+				@media (max-width: @screen-md-max)
+				{
+					display:				block;
+					padding-bottom:			0.5rem;
+				}
+				@media (max-width: @screen-xs-max)
+				{
+					padding-bottom:			0;
+				}
+			}
+		}
+	}
+	.description
+	{
+		margin-top:			-9.0rem;
+		opacity:			0;
+		position:			relative;
+		text-align:			center;
+		z-index:			1;
+		transition:			all 0.5s;
+
+		@media (max-width: @screen-sm-max)
+		{
+			margin-top:			0;
+			opacity:			1.0;
+		}
+
+		h3
+		{
+			margin:				0.2em 0;
+
+			@media (max-width: @screen-xs-max)
+			{
+				margin:				0.4em 0;
+			}
+
+			a
+			{
+				color:			rgb(85, 85, 85);
+
+				&:focus,&:hover
+				{
+					color:			rgb(85, 85, 85);
+				}
+			}
+		}
+		p
+		{
+			font-size:			1.15rem;
+			margin:				0;
+		}
+	}
+
+	&:hover
+	{
+		.icon
+		{
+			opacity:			1.0;
+		}
+		.description
+		{
+			opacity:			1.0;
+		}
+	}
+}
+
+.slider-news
+{
+	.slider-item
+	{
+		background-position:	center;
+		background-size:		auto 100%;
+		color:					rgb(255, 255, 255);
+		height:					20.0rem;
+		text-align:				center;
+		transition:				all 0.5s;
+
+		&:hover
+		{
+			background-size:		auto 105%;
+		}
+		a
+		{
+			color:				rgb(255, 255, 255);
+			display:			block;
+			height:				100%;
+
+			&:focus,&:hover
+			{
+				color:			rgb(255, 255, 255);
+
+				.slide-overlay
+				{
+					height:				100%;
+
+					.slide-text
+					{
+						opacity:			1.0;
+					}
+					.slide-read-more
+					{
+					}
+					h3
+					{
+						background-color:	rgba(255, 126, 0, 0);
+					}
+				}
+			}
+			.slide-overlay
+			{
+				background-color:	rgba(255, 126, 0, 0.9);
+				height:				5.5rem;
+				overflow:			hidden;
+				position:			relative;
+				transition:			all 0.5s;
+
+				.slide-text
+				{
+					opacity:			0;
+					padding:			0 1.0rem 1.0rem 1.0rem;
+					transition:			all 0.5s;
+
+					.fa
+					{
+						font-size:			2.5rem;
+					}
+				}
+				.slide-read-more
+				{
+					background:			linear-gradient(
+											to bottom,
+											rgba(255, 126, 0, 0.0),
+											rgba(255, 126, 0, 1.0) 85%,
+											rgba(255, 126, 0, 1.0));
+					bottom:				0;
+					height:				2.0rem;
+					left:				0;
+					position:			absolute;
+					right:				0;
+				}
+				h3
+				{
+					color:				rgb(255, 255, 255);
+					font-family:		@font-family-special;
+					font-size:			1.4rem;
+					font-weight:		600;
+					margin:				0.7rem;
+				}
+				p
+				{
+					font-size:			1.2rem;
+					font-weight:		400;
+				}
+			}
+		}
+	}
+}
+
+.slider-header
+{
+	.slider-item
+	{
+		background-position:	center left;
+		background-size:		cover;
+		height:					45.0rem;
+
+		@media (max-width: @screen-md-max)
+		{
+			height:					30.0rem;
+		}
+		@media (max-width: @screen-sm-max)
+		{
+			height:					25.0rem;
+		}
+		@media (max-width: @screen-xs-max)
+		{
+			background-position:	top left;
+			height:					35.0rem;
+
+			.header-block
+			{
+				height:					15.0rem;
+				left:					0;
+				position:				absolute;
+				right:					0;
+			}
+		}
+
+		.header-block-l
+		{
+			@media (min-width: @screen-sm-min)
+			{
+				left:					5.0rem;
+			}
+		}
+		.header-block-l
+		{
+			@media (min-width: @screen-sm-min)
+			{
+				right:					5.0rem;
+			}
+		}
+	}
+
+	.owl-controls.clickable
+	{
+		bottom:					0;
+		left:					0;
+		right:					0;
+		position:				absolute;
+		text-align:				center;
+
+		.owl-page span
+		{
+			background-color:		rgb(255, 126, 0);
+		}
+	}
+	.owl-buttons
+	{
+		position:				absolute;
+		top:					42%;
+		width:					100%;
+
+		&>*
+		{
+			color:					rgba(255, 255, 255, 0.3);
+			cursor:					pointer;
+			font-size:				3.0rem;
+			padding:				0.8rem;
+
+			&:hover
+			{
+				color:					rgba(255, 255, 255, 1.0);
+				text-shadow:			2px 2px 4px rgb(0, 0, 0);
+			}
+		}
+
+		.owl-prev
+		{
+			left:					0;
+			position:				absolute;
+		}
+		.owl-next
+		{
+			right:					0;
+			position:				absolute;
+		}
+	}
+}
+
+.front-block
+{
+	padding:				1.0rem 1.4rem 1.3rem 1.4rem;
+	
+	&.front-block-1
+	{
+		background:				fade(@bgr-color-1, 20%);
+	}
+	&.front-block-2
+	{
+		background:				fade(@bgr-color-2, 20%);
+	}
+}
+
+.social-sm
+{
+	li
+	{
+		float:				left;
+		margin:				0 0.7rem 0 0;
+		text-align:			center;
+		width:				2.0rem;
+
+		a
+		{
+			color:					rgb(210, 210, 210);
+
+			&:focus,&:hover
+			{
+				color:				rgb(187, 187, 187);
+			}
+		}
+		img
+		{
+			width:			100%;
+		}
+		span.fa
+		{
+			font-size:		2.0rem;
+		}
+	}
+}
